@@ -5,7 +5,7 @@ crazyJoy任务
 
 活动入口：京东APP我的-更多工具-疯狂的JOY
 已支持IOS双京东账号,Node.js支持N个京东账号
-脚本兼容:QuantumultX,Surge,Loon,JSBox,Node.js
+脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
 ============Quantumultx===============
 [task_local]
 #crazyJoy任务
@@ -33,8 +33,8 @@ let helpSelf = false // 循环助力，默认关闭
 let applyJdBean = 0; //疯狂的JOY京豆兑换，目前最小值为2000京豆，默认为 0 不开启京豆兑换
 let cookiesArr = [], cookie = '', message = '';
 const inviteCodes = [
-  'WYJ0yHMAY9EyV87yr81V6at9zd5YaBeE@BB48h3AETPoBgT0f-in5WQ==@-NIhS5GCc2v5NIQ2iMLVaw==@Nvsdq9jBpUrl3Xj2dwWefQ==@ITHDF803EoO0USld6XQLkKt9zd5YaBeE@McVA9IYe8-vTxiA7HFdw96t9zd5YaBeE@qEkZwFoVEtYRNfdFOj1MWg==',
-  'WYJ0yHMAY9EyV87yr81V6at9zd5YaBeE@BB48h3AETPoBgT0f-in5WQ==@-NIhS5GCc2v5NIQ2iMLVaw==@Nvsdq9jBpUrl3Xj2dwWefQ==@ITHDF803EoO0USld6XQLkKt9zd5YaBeE@McVA9IYe8-vTxiA7HFdw96t9zd5YaBeE@qEkZwFoVEtYRNfdFOj1MWg==',
+  'eZbrQ6-ix4QPg_p1m3UHJw==@-FHIPM-klVZq7v8cqgWnzg==@rvFMkbMITgif6hsqSELJLw==@GffZFhBhxH3S6fJtVe7w46t9zd5YaBeE@_bD0OzzJ1pW64AxWE6gLXQ==@qOiljjDLORTGpn0eMvM6DQ==@b9o9MEucpuTKC4xGIrwX8w==@o9yk1xwIwpz2ipY2lFSYHg==',
+  'eZbrQ6-ix4QPg_p1m3UHJw==@-FHIPM-klVZq7v8cqgWnzg==@rvFMkbMITgif6hsqSELJLw==@GffZFhBhxH3S6fJtVe7w46t9zd5YaBeE@_bD0OzzJ1pW64AxWE6gLXQ==@qOiljjDLORTGpn0eMvM6DQ==@b9o9MEucpuTKC4xGIrwX8w==@o9yk1xwIwpz2ipY2lFSYHg==',
 ];
 const randomCount = $.isNode() ? 10 : 5;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
@@ -178,7 +178,7 @@ if ($.isNode()) {
   $.selfCodes = []
   for (let i = 0; i < cookiesArr.length; i++) {
     if (i%2===0) {
-      $.nextCode = ["WYJ0yHMAY9EyV87yr81V6at9zd5YaBeE", "BB48h3AETPoBgT0f-in5WQ=="];
+      $.nextCode = ["eZbrQ6-ix4QPg_p1m3UHJw==", "-FHIPM-klVZq7v8cqgWnzg=="];
       $.nextCode = $.nextCode[randomNumber(0, $.nextCode.length)];
     }
     if (cookiesArr[i]) {
@@ -320,7 +320,7 @@ function doApplyJdBean(bean = 1000) {
     })
   })
 }
-function getUserInfo(code = "WYJ0yHMAY9EyV87yr81V6at9zd5YaBeE") {
+function getUserInfo(code = "eZbrQ6-ix4QPg_p1m3UHJw==") {
   let body = {"paramData": {"inviter": code}}
   return new Promise(async resolve => {
     $.get(taskUrl('crazyJoy_user_gameState', JSON.stringify(body)), async (err, resp, data) => {
