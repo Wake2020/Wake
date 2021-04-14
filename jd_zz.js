@@ -40,14 +40,14 @@ if ($.isNode()) {
 }
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
 const inviteCodes = [
-  `A3bfBSSgXGb240Npt@AUWE53NfPt29dbwO8giY-=@ASjFXnquXyjwAAA@AAjNWmKSYxSgJCGHw3nxOkA@AUWE52eTplXJ5YSa4lS4-@AUWE5yd7asW16SwejjDko@AUWE5yfD2iVxNVSeDvj4K@SanTTlZKpId5h-KB1QVKw@S5KkcRR1N9VXRIB3xwvQDdw@S5KkcRR8b9wLVIU-ix_UOcg@S5KkcRU9M81DXckyhwfQKIQ`,
-  `A3bfBSSgXGb240Npt@AUWE53NfPt29dbwO8giY-=@ASjFXnquXyjwAAA@AAjNWmKSYxSgJCGHw3nxOkA@AUWE52eTplXJ5YSa4lS4-@AUWE5yd7asW16SwejjDko@AUWE5yfD2iVxNVSeDvj4K@SanTTlZKpId5h-KB1QVKw@S5KkcRR1N9VXRIB3xwvQDdw@S5KkcRR8b9wLVIU-ix_UOcg@S5KkcRU9M81DXckyhwfQKIQ`,
+  `SaH_klpueIdxn-KBh@S5KkcFm1TiQylY32vxbJo@0Xy6ohnQm5dXnt8Q8Lkr4Q==@S__lyQRge8l3fKA@S5KkcBldgrROmSVy03KV-@S5KkcRBwfoQHRdU-nl6INcw@S5KkcFkN_sT2SfV2P97VK@SanTTlZKpId5h-KB1QVKw@S5KkcRR1N9VXRIB3xwvQDdw@S5KkcRR8b9wLVIU-ix_UOcg@S5KkcRU9M81DXckyhwfQKIQ`,
+  `SaH_klpueIdxn-KBh@S5KkcFm1TiQylY32vxbJo@0Xy6ohnQm5dXnt8Q8Lkr4Q==@S__lyQRge8l3fKA@S5KkcBldgrROmSVy03KV-@S5KkcRBwfoQHRdU-nl6INcw@S5KkcFkN_sT2SfV2P97VK@SanTTlZKpId5h-KB1QVKw@S5KkcRR1N9VXRIB3xwvQDdw@S5KkcRR8b9wLVIU-ix_UOcg@S5KkcRU9M81DXckyhwfQKIQ`,
 ]
 let nowTimes = new Date(new Date().getTime() + new Date().getTimezoneOffset() * 60 * 1000 + 8 * 60 * 60 * 1000);
 !(async () => {
   $.tuanList = []
   await requireConfig();
-  if (helpAuthor) await getAuthorShareCode('https://gitee.com/Soundantony/updateTeam/raw/master/shareCodes/jd_zz.json');
+  if (helpAuthor) await getAuthorShareCode('https://gitee.com/wake326/RandomShareCode/raw/master/JD_Jdzz.json');
   if (!cookiesArr[0]) {
     $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
     return;
@@ -391,7 +391,7 @@ async function helpFriends() {
 function readShareCode() {
   console.log(`开始`)
   return new Promise(async resolve => {
-    $.get({url: "https://gitee.com/Soundantony/RandomShareCode/raw/master/JD_Jdzz.json",headers:{
+    $.get({url: "https://gitee.com/wake326/RandomShareCode/raw/master/JD_Jdzz.json",headers:{
         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/87.0.4280.88"
       }}, async (err, resp, data) => {
       try {
