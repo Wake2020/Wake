@@ -39,15 +39,15 @@ if ($.isNode()) {
 }
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
 const inviteCodes = [
-    `ACjVSmK-QzzYAFWX83XxNnQ@S5KkcH1lQpB6qW3uX06Fu@ACjBfn6iTzTYBAGaXnQ@A3avtRgYKGqKz3e15@A373QSgwwGJOy3Oh-CfTM@S5KkcRBoRp1SEJBP1nKIDdg@S5KkcRR1K8wXXJxKiwaIIdA@Sv_h6Rhof_FzTIxyb1A@S5KkcNmJNlxOBRUCU9axO@A06fNRgYIG7Kz3ul3Ctb-Q-ggGzUB`,
-    `ACjVSmK-QzzYAFWX83XxNnQ@S5KkcH1lQpB6qW3uX06Fu@ACjBfn6iTzTYBAGaXnQ@A3avtRgYKGqKz3e15@A373QSgwwGJOy3Oh-CfTM@S5KkcRBoRp1SEJBP1nKIDdg@S5KkcRR1K8wXXJxKiwaIIdA@Sv_h6Rhof_FzTIxyb1A@S5KkcNmJNlxOBRUCU9axO@A06fNRgYIG7Kz3ul3Ctb-Q-ggGzUB`,
+    `SaH_klpueIdxn-KBh@S5KkcFm1TiQylY32vxbJo@0Xy6ohnQm5dXnt8Q8Lkr4Q==@S__lyQRge8l3fKA@S5KkcBldgrROmSVy03KV-@S5KkcRBwfoQHRdU-nl6INcw@S5KkcFkN_sT2SfV2P97VK@SanTTlZKpId5h-KB1QVKw@S5KkcRR1N9VXRIB3xwvQDdw@S5KkcRR8b9wLVIU-ix_UOcg@S5KkcRU9M81DXckyhwfQKIQ`,
+    `SaH_klpueIdxn-KBh@S5KkcFm1TiQylY32vxbJo@0Xy6ohnQm5dXnt8Q8Lkr4Q==@S__lyQRge8l3fKA@S5KkcBldgrROmSVy03KV-@S5KkcRBwfoQHRdU-nl6INcw@S5KkcFkN_sT2SfV2P97VK@SanTTlZKpId5h-KB1QVKw@S5KkcRR1N9VXRIB3xwvQDdw@S5KkcRR8b9wLVIU-ix_UOcg`,
 ]
 let nowTimes = new Date(new Date().getTime() + new Date().getTimezoneOffset() * 60 * 1000 + 8 * 60 * 60 * 1000);
 !(async () => {
   $.tuanList = [];
   $.authorTuanList = [];
   await requireConfig();
-  if (helpAuthor) await getAuthorShareCode('https://gitee.com/Soundantony/updateTeam/raw/master/shareCodes/jd_zz.json');
+  if (helpAuthor) await getAuthorShareCode('https://gitee.com/wake326/RandomShareCode/raw/master/JD_Jdzz.json');
   if (!cookiesArr[0]) {
     $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
     return;
@@ -399,7 +399,7 @@ async function helpFriends() {
 function readShareCode() {
   console.log(`开始`)
   return new Promise(async resolve => {
-        $.get({url: `https://gitee.com/Soundantony/RandomShareCode/raw/master/JD_Jdzz.json`,headers:{
+        $.get({url: `https://gitee.com/wake326/RandomShareCode/raw/master/JD_Jdzz.json`,headers:{
           "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/87.0.4280.88"
         }, 'timeout': 10000}, (err, resp, data) => {
       try {
