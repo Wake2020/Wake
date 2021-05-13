@@ -46,4 +46,4 @@ jobs:
                   QYWX_AM: ${{ github.event.client_payload.QYWX_AM || secrets.QYWX_AM }}
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
-                  SYNCURL: https://github.com/wuzhi03/MyActions/raw/main/jd_syj.js
+                  SYNCURL: https://gitee.com/jk9527/jd_scripts/raw/fb1e15160c76de0bfb56d15da0a9da6d56a87e6e/jd_syj.js
