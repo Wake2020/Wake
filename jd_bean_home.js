@@ -27,7 +27,7 @@ const notify = $.isNode() ? require('./sendNotify') : '';
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 let jdNotify = true;//是否关闭通知，false打开通知推送，true关闭通知推送
 //IOS等用户直接用NobyDa的jd cookie
-let helpAuthor = false
+let helpAuthor = true
 let cookiesArr = [], cookie = '', message;
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
@@ -212,6 +212,7 @@ function getUserInfo() {
                 if (data.data.beanActivityVisitVenue && data.data.beanActivityVisitVenue.taskStatus === '0') {
                   await help(shareCode, groupCode, 1)
                 }
+                console.log(`\n京东账号${$.index} ${$.nickName || $.UserName} 抢京豆邀请码：${shareCode}\n`);
                 $.newShareCodes.push([shareCode, groupCode])
               }
             }
@@ -242,6 +243,7 @@ function hitGroup() {
               if (shareCode) {
                 $.newShareCodes.push([shareCode, groupCode])
                 console.log('开团成功')
+                console.log(`\n京东账号${$.index} ${$.nickName || $.UserName} 抢京豆邀请码：${shareCode}\n`);
                 await help(shareCode, groupCode, 1)
               } else {
                 console.log(`为获取到助力码，错误信息${JSON.stringify(data.data)}`)
